@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="250" src="resources/images/xshop-logo.svg" alt="xShop logo">
+    <img width="96" src="resource/logo.png" alt="multitenancy support for xShop">
 </div>
 
 # xShop Multitenancy Package
@@ -18,25 +18,19 @@
 To install the package, follow these steps:
 
 ```bash
-composer require xshop/multitenancy
+composer require sadeghpm/xshop-multitenancy
 ```
 ## Multitenancy Setup
 
 ### Initial Setup
 
-Run the multitenancy:setup command to configure multitenancy and create the initial tenant:
+Run the multitenancy:setup command to configure multitenancy:
 ```bash
 php artisan multitenancy:setup
 ```
-This command will:
-1. Configure the necessary settings.
-2. Ask for the first tenant's name and domain.
-3. Create the tenant and database path in the tenants table.
-4. Prompt for admin user details and create the admin user within the tenant's database.
+### Adding Tenants
 
-### Adding More Tenants
-
-To add additional tenants, use the multitenancy:create-tenant command:
+To add new tenants, use the multitenancy:create-tenant command:
 ```bash
 php artisan multitenancy:create-tenant
 ```
@@ -49,8 +43,7 @@ This command will:
 
 - multitenancy:setup: For initial configuration and creating the first tenant.
 - multitenancy:create-tenant: For adding new tenants.
-
-These commands ensure the multitenancy setup is handled easily, including database creation, migrations, seeders, and admin user setup for each tenant.
+- multitenancy:list-tenants : To list all tenants.
 
 <p> 
     Developed With Love! ❤️

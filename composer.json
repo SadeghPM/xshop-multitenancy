@@ -1,5 +1,5 @@
 {
-    "name": "xshop/multitenancy",
+    "name": "sadeghpm/xshop-multitenancy",
     "require": {
         "spatie/laravel-multitenancy": "^4.0"
     },
