@@ -1,0 +1,24 @@
+{
+    "name": "xshop/multitenancy",
+    "require": {
+        "spatie/laravel-multitenancy": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xshop\\Multitenancy\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sadeghpm",
+            "email": "sadeghpm@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xshop\\Multitenancy\\XshopMultitenancyServiceProvider"
+            ]
+        }
+    }
+}
