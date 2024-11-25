@@ -28,6 +28,26 @@ Run the multitenancy:setup command to configure multitenancy:
 ```bash
 php artisan multitenancy:setup
 ```
+
+### Change Database config
+Add the following line to your `config/database.php` file:
+```php
+        'landlord'=>[
+            'driver' => 'sqlite',
+            'database' => database_path('tenant-db.sqlite'),
+            'prefix' => '',
+        ],
+        'tenant'=>[
+            'driver' => 'sqlite',
+            'database' => null,
+            'prefix' => '',
+        ],
+```
+
+Set active connection to tenant in `.env` file:
+```env
+DB_CONNECTION=tenant
+```
 ### Adding Tenants
 
 To add new tenants, use the multitenancy:create-tenant command:
@@ -39,11 +59,11 @@ This command will:
 2. Create the tenant in the database.
 3. Prompt for admin user details and create the admin user for the new tenant.
 
-### Summary
+### Commands Summary
 
-- multitenancy:setup: For initial configuration and creating the first tenant.
-- multitenancy:create-tenant: For adding new tenants.
-- multitenancy:list-tenants : To list all tenants.
+- `multitenancy:setup`: For initial configuration and creating the first tenant.
+- `multitenancy:create-tenant`: For adding new tenants.
+- `multitenancy:list-tenants` : To list all tenants.
 
 <p> 
     Developed With Love! ❤️
